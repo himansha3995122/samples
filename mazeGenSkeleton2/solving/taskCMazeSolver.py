@@ -13,12 +13,17 @@ class TaskCMazeSolver(MazeSolver):
         super().__init__()
         self.m_name = "taskC"
 
+    def solveMaze(self, maze: Maze3D, entrance: Coordinates3D):
+        self.solveMazeTaskC(maze)
+
     def solveMazeTaskC(self, maze: Maze3D):
         self.m_solved = False
-        self.resetPathAndCellExplored()
+        # self.resetPathAndCellExplored()
 
         entrances = maze.getEntrances()
         exits = maze.getExits()
+
+        print("Entrances: ", entrances)
 
         if not entrances or not exits:
             return
@@ -28,6 +33,7 @@ class TaskCMazeSolver(MazeSolver):
         paths = {}
 
         for entrance in entrances:
+            
             queue = deque([(entrance, 0)])
             visited = set()
             local_paths = {entrance: None}
