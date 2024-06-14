@@ -1,0 +1,15 @@
+{
+  "levelSpecs": [[25, 25]],
+  "entrances": [
+    [0, 0, -1],
+    [0, -1, 1]
+  ],
+  "exits": [
+    [0, 3, 25],
+    [0, 25, 4]
+  ],
+  "generator": "wilson",
+  "solver": "pledge",
+  "solverEntranceIndex": 1,
+  "visualise": true
+}

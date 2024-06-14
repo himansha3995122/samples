@@ -1,0 +1,6 @@
+__pycache__
+*_capture.txt
+*.png
+/labelled/
+/src.txt
+*.sh
